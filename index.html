@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="es"> <!-- se declara documento en español -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge"><!--Se usa IE=edge para indicar a Windows Internet Explorer 8 que use el máximo modo disponible-->
+        <title>.::Dental CODES - Home::.</title>
+
+        <meta name="description" content="Consultorio dental especializado en tratamientos estéticos como Ortodoncia, Implantes, Odontopediatría, endodoncia, Periodoncia y cirugías en general">
+        <meta name="author" content="Xavier Rosales García @xavieruami"> <!-- autor -->
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximun-scale=1"><!--De este modo el usuario no puede hacer zoom en movil -->
+        <!-- importacion de fuente de google -->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <!-- <link rel="stylesheet" href="css/normalize.css"> --><!-- ya incluye border-size:border-box -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.2/flexboxgrid.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/prefixfree.min.js"></script> <!-- pone prefijos en caso de necesitarlos -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Estás navegando con un navegador <strong>Desactualizado</strong>. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar su experiencia de uso.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <div class="video-container">
+            <video muted="true" autoplay="true" loop="true" width="1280px" height="720px" poster="img/matcha.jpg"> <!-- poster carga una imagen mientras se carga el video, cuando se carga el video se quita la imagen --> 
+                <source src="video/matcha.mp4" type="video/mp4" >
+                <source src="video/matcha.webm" type="video/webm">
+            </video>
+        </div>
+        <section class="row full-height middle-xs center-xs relative up">
+            <section class="col-xs-12">
+                <div class="box white-text">
+                <!-- En este caso yo usaría picture responsivo -->
+                    <img src="img/logo.png" alt="logo del restaurante" width=200px>
+                    <h1 class="dancing-script title no-margin">
+                        Consultorio CODES
+                    </h1>
+                    <p id="is-open">
+                        Abierto Ahora
+                    </p>  
+                </div>
+            </section>
+
+            <nav class="fixed top right white-text" id="navigation">
+                <ul>
+                    <li>
+                        Inicio
+                    </li>
+                    <li>
+                        Menú
+                    </li>
+                    <li>
+                        Galería
+                    </li>
+                    <li>
+                        Contacto
+                    </li>
+                    <li>
+                        Cómo llegar
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
