@@ -121,6 +121,9 @@ body {
 .hidden {
   display: none !important;
 }
+.navigation li {
+  padding: 5px 10px;
+}
 .no-margin {
   margin: 0px;
 }

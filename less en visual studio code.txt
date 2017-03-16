@@ -1,0 +1,84 @@
+Copilar less en Visual studio code
+
+Descargat NodeJs desde https://nodejs.org/en/download/
+	Instalar NodeJs
+Mediante NPM instalar el compilor
+	En el cmd escribir:
+	npm install -g node-sass less
+Para probar crear el archivo "style.less" desde el editor con el código
+$padding: 6px;
+
+nav {
+  ul {
+    margin: 0;
+    padding: $padding;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: $padding 12px;
+    text-decoration: none;
+  }
+}
+
+Guardar - Cerrar
+
+Abrir la carpeta contenedora desde el editor
+
+Crear el task.jason 
+Abrir el Command palette mediante Ctrl+Shift+p
+escribir "Consfigure task runner"
+presioner Enter
+Seleccionar Otros
+copiar el siguiente código en el archivo
+// Less configuration
+{
+    "version": "0.1.0",
+    "command": "lessc",
+    "isShellCommand": true,
+    "args": ["styles.less", "styles.css"]
+}
+guardar
+para compilar el archivo less activar el Run buld Task presionando Ctrl+Shift+B
+El archivo CSS queda creado
+
+para compilar automáticamente
+instalar Gulp escribiendo el el cmd la siguiente instrucción
+npm install gulp gulp-sass gulp-less
+presionar Enter
+En la raiz del directorio donde está el archivo less crear el archivo gulpfile.js
+// Less configuration
+var gulp = require('gulp');
+var less = require('gulp-less');
+
+gulp.task('less', function() {
+    gulp.src('*.less')
+        .pipe(less())
+        .pipe(gulp.dest(function(f) {
+            return f.base;
+        }))
+});
+
+gulp.task('default', ['less'], function() {
+    gulp.watch('*.less', ['less']);
+})
+guardar
+
+el archivo task.json se debe editar para que quede como
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "default",
+            "isBuildCommand": true,
+            "showOutput": "always",
+            "isWatching": true
+        }
+    ]
+}
+
