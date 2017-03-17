@@ -100,6 +100,26 @@ html,body{
     width:100%;
 }
 
+.navigation{
+    li{
+        .medium;
+        padding: 5px 10px;//up bottom   right left
+        transition: all 0.5s;
+        &:hover{
+            background-color:rgba(0,0,0,0.5);
+        }
+
+        a{
+            color:white;
+            cursor: pointer;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
 //Hacerlo mixin
 .video-container{
     height: 100%;
@@ -123,9 +143,7 @@ html,body{
     }
 }
 
-.row{
-    margin:0;
-}
+
 
 
 
@@ -143,6 +161,18 @@ html,body{
 /*
  * Hide visually and from screen readers
  */
+.absolute{
+    position: absolute;
+}
+
+.black{
+    background-color: grey;
+}
+
+.bottom{
+    bottom: 0px;
+}
+
 .dancing-script{
     font-family: 'Dancing Script', cursive;
 }
@@ -155,14 +185,20 @@ html,body{
     height: 100%;
 }
 
+.full-width{
+    width:100%;
+}
+
 .hidden {
     display: none !important;
 }
 
-.navigation{
-    li{
-        padding: 5px 10px;
-    }
+.large-padding{
+    padding: 10px 15px;
+}
+
+.medium{
+    font-size: 1.5em;
 }
 
 .no-margin{
@@ -177,12 +213,16 @@ html,body{
     right: 5em;
 }
 
+.row{
+    margin:0;
+}
+
 .title{
     font-size: 4em;
 }
 
 .top{
-    top:1em;
+    top:3em;
 }
 
 .up{

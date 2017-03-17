@@ -82,6 +82,21 @@ body {
   height: 100%;
   width: 100%;
 }
+.navigation li {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  transition: all 0.5s;
+}
+.navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navigation li a {
+  color: white;
+  cursor: pointer;
+}
+.navigation li a:hover {
+  text-decoration: none;
+}
 .video-container {
   height: 100%;
   width: 100%;
@@ -100,15 +115,21 @@ body {
   width: auto;
   height: auto;
 }
-.row {
-  margin: 0;
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Hide visually and from screen readers
  */
+.absolute {
+  position: absolute;
+}
+.black {
+  background-color: grey;
+}
+.bottom {
+  bottom: 0px;
+}
 .dancing-script {
   font-family: 'Dancing Script', cursive;
 }
@@ -118,11 +139,17 @@ body {
 .full-height {
   height: 100%;
 }
+.full-width {
+  width: 100%;
+}
 .hidden {
   display: none !important;
 }
-.navigation li {
-  padding: 5px 10px;
+.large-padding {
+  padding: 10px 15px;
+}
+.medium {
+  font-size: 1.5em;
 }
 .no-margin {
   margin: 0px;
@@ -133,11 +160,14 @@ body {
 .right {
   right: 5em;
 }
+.row {
+  margin: 0;
+}
 .title {
   font-size: 4em;
 }
 .top {
-  top: 1em;
+  top: 3em;
 }
 .up {
   z-index: 10;
