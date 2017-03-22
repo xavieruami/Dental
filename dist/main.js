@@ -1,1 +1,1 @@
-"use strict";!function(){$(window).scroll(function(){console.log("wiiuuuuuuuuuuuu scroll")})}();
+"use strict";!function(){function isInbottom(){var $description=$("#description"),descriptionHeight=$description.height();return $(window).scrollTop()>$(window).height()-descriptionHeight}console.log($(window).height()),$(window).scroll(function(){console.log(isInbottom())})}();
