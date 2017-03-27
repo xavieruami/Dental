@@ -1,1 +1,1 @@
-"use strict";!function(){$(window).scroll(function(){console.log("wiiuuuuuuuuuuuu scroll")})}();
+"use strict";
