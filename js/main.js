@@ -1,16 +1,39 @@
 ;(function(){
+
 	let sticky = false
-	console.log($(window).height());
+	$("#stiky-navigation").removeClass("hidden")
+	$("#stiky-navigation").slideUp(0)
 	$(window).scroll(()=>{
-		console.log(isInbottom())
+		const inBottom = isInBottom()
+		if (inBottom && !sticky){
+			//mostrar la navegación stiky
+			sticky = true
+			stickNavigation()
+		}
+		if(!inBottom && sticky){
+			//ocultar la navegación stiky
+			sticky = false
+			unStickNavigation()
+		}
 	})
 
-// por defecto los elementos son constantes a menos de que vayan a cambiar	
-	function isInbottom(){
-		// $description está asignada al id description y por como es constante ya no puede cambiar de valor
+	function stickNavigation(){
+		$("#description").addClass ("fixed").removeClass("absolute")//cambia la posición a fixed
+		$("#navegation").slideUp("fast")
+		$("#stiky-navigation").slideDown("fast")
+	}
+
+	function unStickNavigation(){
+		$("#description").removeClass ("fixed").addClass("absolute")//cambia la posición a fixed
+		$("#navegation").slideDown("fast")
+		$("#stiky-navigation").slideUp("fast")
+	}
+
+
+//esta función regresa verdadero desde que alcanzamos el footer de la página aunque nos pasemos
+	function isInBottom(){
 		const $description = $("#description")
-		//recibo la altura del elemento description obtenido en la línea anterior
 		const descriptionHeight = $description.height()
-		return $(window).scrollTop() > $(window).height() - descriptionHeight;
+		return $(window).scrollTop() > $(window).height() - (descriptionHeight*2)
 	}
 })()

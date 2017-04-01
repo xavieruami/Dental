@@ -115,6 +115,18 @@ body {
   width: auto;
   height: auto;
 }
+/* =========================================================================
+ID's
+===========================================================================*/
+#description ul {
+  margin: 0px;
+}
+#description.absolute {
+  bottom: 0px;
+}
+#description.fixed {
+  top: 0px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -143,7 +155,7 @@ body {
   width: 100%;
 }
 .hidden {
-  display: none !important;
+  display: none;
 }
 .large-padding {
   padding: 10px 15px;
